@@ -1,27 +1,20 @@
-- name: platform
+- name: docker-master
   cpus: 1
   memory: 1024
-  hostname: platform.lab.com
+  hostname: docker-master.lab.com
   ip: 192.168.66.10
   sistema: ubuntu/bionic64
 
-- name: automation
+- name: docker-slave01
   cpus: 1
   memory: 1024
-  hostname: automation.lab.com
+  hostname: docker-slave01.lab.com
   ip: 192.168.66.20
-  sistema: centos/7
+  sistema: ubuntu/bionic64
 
-#- name: docker
-#  cpus: 1
-#  memory: 1024
-#  hostname: docker.lab.com
-#  ip: 192.168.66.30
-#  sistema: ubuntu/bionic64
-
-#- name: monitoring
-#  cpus: 1
-#  memory: 2048
-#  hostname: monitoring.lab.com
-#  ip: 192.168.66.40
-#  sistema: ubuntu/bionic64
+- name: docker-slave02
+  cpus: 1
+  memory: 1024
+  hostname: docker-slave02.lab.com
+  ip: 192.168.66.30
+  sistema: ubuntu/bionic64

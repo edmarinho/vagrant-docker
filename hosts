@@ -1,0 +1,5 @@
+127.0.0.1 localhost
+
+192.168.66.10 docker-master.lab.com docker-master
+192.168.66.20 docker-slave01.lab.com docker-slave01
+192.168.66.50 docker-slave02.lab.com docker-slave02

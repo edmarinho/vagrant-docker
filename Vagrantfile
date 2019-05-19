@@ -24,12 +24,13 @@ Vagrant.configure("2") do |config|
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa /root/.ssh/id_rsa"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa.pub /root/.ssh/authorized_keys"
       config.vm.provision "shell", inline: "chmod 600 /root/.ssh/id_rsa"
+	  config.vm.provision "shell", inline: "cat /vagrant/hosts > /etc/hosts"
 
-      srv.vm.provision :ansible do |ansible|
-        ansible.limit = "all"
-        ansible.compatibility_mode = "2.0"
-        ansible.playbook = "playbook.yml"
-      end
+      #srv.vm.provision :ansible do |ansible|
+        #ansible.limit = "all"
+        #ansible.compatibility_mode = "2.0"
+        #ansible.playbook = "playbook.yml"
+      #end
     end
   end
 end
